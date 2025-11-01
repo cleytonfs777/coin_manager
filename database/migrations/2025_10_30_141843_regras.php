@@ -10,15 +10,15 @@ return new class extends Migration {
    */
   public function up(): void
   {
-    Schema::create("coins", function (Blueprint $table) {
+    Schema::create("regras", function (Blueprint $table) {
       $table->id();
-      $table->string("symbol");
-      $table->string("name");
-      $table->double("price", 10, 2);
-      $table->integer("qtd");
-      $table->string("slug")->unique(); // 👈 novo campo
-      $table->boolean("is_fav")->default(false);
-      // definição de chaves estrangeiras
+      $table->string("nome");
+      $table->timestamps();
+    });
+
+    Schema::create("regra_user", function (Blueprint $table) {
+      $table->id();
+
       $table->unsignedBigInteger("id_user");
       $table
         ->foreign("id_user")
@@ -26,13 +26,15 @@ return new class extends Migration {
         ->on("users")
         ->onDelete("cascade")
         ->onUpdate("cascade");
-      $table->unsignedBigInteger("id_categoria");
+
+      $table->unsignedBigInteger("id_regra");
       $table
-        ->foreign("id_categoria")
+        ->foreign("id_regra")
         ->references("id")
-        ->on("categorias")
+        ->on("regras")
         ->onDelete("cascade")
         ->onUpdate("cascade");
+
       $table->timestamps();
     });
   }
@@ -42,6 +44,7 @@ return new class extends Migration {
    */
   public function down(): void
   {
-    Schema::dropIfExists("coins");
+    Schema::dropIfExists("regras");
+    Schema::dropIfExists("regra_user");
   }
 };
