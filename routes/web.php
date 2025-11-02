@@ -2,5 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CoinController;
+use App\Http\Controllers\SiteController;
 
-Route::get("/", [CoinController::class, "index"]);
+Route::get("/", [SiteController::class, "index"]);

@@ -1,11 +1,73 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🪙 Coin Manager
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Sistema de gerenciamento de moedas desenvolvido em Laravel.
+
+## 🚀 Configuração Rápida
+
+### Método 0: Resolver Dependências (Se necessário)
+```bash
+./fix-dependencies.sh
+```
+
+### Método 1: Script Automatizado (Recomendado)
+```bash
+./setup.sh
+```
+
+### Método 2: Manual
+Consulte o [Guia de Configuração Completo](SETUP.md)
+
+### Método 3: Docker
+Consulte o [Guia Docker](DOCKER.md)
+
+## 📚 Documentação
+
+- **[SETUP.md](SETUP.md)** - Guia completo de configuração do projeto
+- **[DOCKER.md](DOCKER.md)** - Configuração e uso do Docker
+- **setup.sh** - Script de configuração automática
+- **fix-dependencies.sh** - Script para resolver dependências do sistema
+
+## 🏗️ Tecnologias
+
+- **Backend:** Laravel 12.x
+- **Banco de Dados:** MariaDB
+- **Frontend:** Blade Templates + TailwindCSS  
+- **Gerenciamento:** Docker + PHPMyAdmin
+
+## 📋 Funcionalidades
+
+- Gerenciamento de moedas
+- Sistema de categorias
+- Interface administrativa
+- API RESTful
+
+## 🔧 Comandos Principais
+
+```bash
+# Iniciar servidor de desenvolvimento
+php artisan serve
+
+# Executar migrações
+php artisan migrate
+
+# Popular banco com dados de exemplo
+php artisan db:seed
+
+# Iniciar Docker (banco de dados)
+docker-compose up -d
+```
+
+## 🤝 Contribuição
+
+1. Faça um fork do projeto
+2. Crie uma branch para sua feature
+3. Commit suas mudanças
+4. Push para a branch
+5. Abra um Pull Request
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT.
 
 ## About Laravel
 

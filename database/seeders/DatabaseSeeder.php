@@ -14,6 +14,12 @@ class DatabaseSeeder extends Seeder
   public function run(): void
   {
      // User::factory(10)->create();
-    $this->call(CoinsSeeder::class);
+    
+    // Ordem correta: primeiro usuários, depois categorias, por último moedas
+    $this->call([
+      UsersSeeder::class,
+      CategoriasSeeder::class,
+      CoinsSeeder::class,
+    ]);
   }
 }

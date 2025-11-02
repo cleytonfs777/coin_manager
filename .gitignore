@@ -22,3 +22,14 @@
 Homestead.json
 Homestead.yaml
 Thumbs.db
+
+# Docker volumes e dados
+/docker/mariadb/data
+/docker/volumes
+
+# Backups do banco
+*.sql
+backup*.sql
+
+# Logs do Docker
+docker-compose.override.yml
