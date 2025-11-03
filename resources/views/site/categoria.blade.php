@@ -2,6 +2,9 @@
 @section('title','Home Cripto Buy')
 @section('content')
 <div class="row container">
+
+  <h3>Categoria: {{ $categoria->nome }}</h3>
+
   @foreach ($coins as $coin)
   <div class="col s12 m4">
     <div class="card">

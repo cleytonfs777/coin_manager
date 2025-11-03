@@ -10,7 +10,7 @@ class CoinController extends Controller
 {
   public function index()
   {
-    $coins = Coin::paginate(3);
+    $coins = Coin::paginate(6);
     return view("site.home", compact("coins"));
   }
 }
